@@ -28,3 +28,8 @@
 .itemData button:hover {
   background-color: black;
 }
+
+bold {
+  color: orange;
+  font-weight: 700;
+}

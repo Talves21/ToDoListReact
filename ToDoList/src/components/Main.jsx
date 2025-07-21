@@ -9,10 +9,8 @@ function Main() {
         <div className="row">
             <div className="col-12 text-center">
                 <h1>To Do List</h1>
-                <br />
-                <br />
             </div>
-            <div className="col-12 text-center">
+            <div className="col-12 text-center pt-5">
                 <h3>Activities</h3>
             </div>
             <div className="col-12">
@@ -39,16 +37,14 @@ function ItemData(props) {
         <div className="row">
             <div className="col-6">
                 <br />
-                <p>Chore: {props.listName}</p>
-                <p>Time Due: {props.time}</p>
+                <p><bold>Chore:</bold> {props.listName}</p>
+                <p><bold>Due:</bold> {props.time}</p>
                 <br />
             </div>
-            <div className="col-4">
-                <br />
-                <p>Desc: {props.desc}</p>
+            <div className="col-4 pt-5">
+                <p><bold>Desc:</bold> {props.desc}</p>
             </div>
-            <div className="col-2">
-                <br />
+            <div className="col-2 pt-5">
                 <button className='compButton'>Complete</button>
             </div>
         </div>
