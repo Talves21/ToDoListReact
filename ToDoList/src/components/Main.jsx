@@ -22,34 +22,26 @@ function Main() {
 
 function Data() {
 
-    const listData = toDoData.map((currentData) => {return <ItemData listName = {currentData.name} desc = {currentData.description} time = {currentData.timeDue} />})
+    const [showInput, setShowInput] = useState(true);
 
     return(
         <div className="row itemData">
-            {listData}
-        </div>
-    )
-}
-
-function ItemData(props) {
-    
-    return (
-        <div className="row">
             <div className="col-6">
                 <br />
-                <p><bold>Chore:</bold> {props.listName}</p>
-                <p><bold>Due:</bold> {props.time}</p>
+                <p><bold>Chore:</bold> <input type="text" /></p>
+                <p><bold>Due:</bold> <input type="text" /></p>
                 <br />
             </div>
             <div className="col-4 pt-5">
-                <p><bold>Desc:</bold> {props.desc}</p>
+                <p><bold>Desc:</bold> <input type="text" /></p>
             </div>
             <div className="col-2 pt-5">
-                <button className='compButton'>Complete</button>
+                <button onClick={() => setShowInput(false)} className='compButton'>Complete</button>
             </div>
         </div>
 
     )
 }
+
 
 export default Main
